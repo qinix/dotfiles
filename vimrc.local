@@ -35,3 +35,5 @@ silent! autocmd VimEnter * RemoveConflictingAlignMaps
 set tabstop=4
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+set pastetoggle=<F9>
+hi Normal ctermbg=none " 透明终端背景

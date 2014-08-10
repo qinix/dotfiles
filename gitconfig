@@ -1,0 +1,23 @@
+[user]
+	name = Eric Zhang
+	email = i@qinix.com
+[core]
+	editor = vim
+	excludesfile = /Users/qinix/.gitignore_global
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	pu = push
+	fe = fetch
+	st = status
+	me = merge
+	rb = rebase
+	ma = master
+[color]
+	diff = auto
+	branch = auto
+	status = auto
+    interactive = auto
+[merge]
+	tool = vimdiff
