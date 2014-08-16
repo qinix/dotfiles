@@ -41,13 +41,13 @@ export SYSTEM_TYPE=$(uname -s)
 # export LANG=zh_CN.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export HTTP_PROXY=http://q.gfw.li:37979/
+export HTTP_PROXY=http://apn.5bird.com:37660/
 alias grep="grep --color=auto"
 alias ll="ls -lh"
 alias la="ls -a"
 
 export GOPATH=/Volumes/HDD/go
-export PATH=$HOME/bin:$GOPATH/bin:$PATH:$HOME/.rvm/bin:/usr/local/sbin
+export PATH=$HOME/bin:$GOPATH/bin:/usr/local/bin:$PATH:$HOME/.rvm/bin:/usr/local/sbin
 
 if [ "$SYSTEM_TYPE" = "Darwin" ]; then
     alias ls="ls -FG"
