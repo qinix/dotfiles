@@ -171,6 +171,7 @@ LINKED_FILES = filemap(
   'gitconfig' => '~/.gitconfig',
   'gitignore_global' => '~/.gitignore_global',
   'zshrc' => '~/.zshrc',
+  'gemrc' => '~/.gemrc',
   'pryrc' => '~/.pryrc'
 )
 
