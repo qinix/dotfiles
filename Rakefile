@@ -22,12 +22,6 @@ def version_match?(requirement, version)
   Gem::Dependency.new('', requirement).match?('', version)
 end
 
-def install_github_bundle(user, package)
-  unless File.exist? File.expand_path("~/.vim/bundle/#{package}")
-    sh "git clone https://github.com/#{user}/#{package} ~/.vim/bundle/#{package}"
-  end
-end
-
 def brew_cask_install(package, *options)
   output = `brew cask info #{package}`
   return unless output.include?('Not installed')
@@ -161,13 +155,6 @@ namespace :install do
     # tmux copy-pipe function needs tmux >= 1.8
     brew_install 'tmux', :requires => '>= 1.8'
   end
-
-  desc 'Install Vundle'
-  task :vundle do
-    step 'vundle'
-    install_github_bundle 'gmarik','vundle'
-    sh '/usr/bin/vim -c "BundleInstall" -c "q" -c "q"'
-  end
 end
 
 def filemap(map)
@@ -181,13 +168,6 @@ COPIED_FILES = filemap(
 )
 
 LINKED_FILES = filemap(
-  'vimrc.bundles.local' => '~/.vimrc.bundles.local',
-  'tmux.conf.local'     => '~/.tmux.conf.local'
-  'vimrc.local'         => '~/.vimrc.local',
-  'vim'           => '~/.vim',
-  'tmux.conf'     => '~/.tmux.conf',
-  'vimrc'         => '~/.vimrc',
-  'vimrc.bundles' => '~/.vimrc.bundles',
   'gitconfig' => '~/.gitconfig',
   'gitignore_global' => '~/.gitignore_global',
   'zshrc' => '~/.zshrc',
