@@ -48,6 +48,7 @@ alias e="emacsclient -t"
 alias ed="emacs --daemon"
 alias ec="emacsclient -t"
 alias vim="emacsclient -t"
+alias s="python -m SimpleHTTPServer"
 
 export GOPATH=/Volumes/HDD/go
 export PATH=$HOME/bin:$GOPATH/bin:/usr/local/bin:$PATH:$HOME/.rvm/bin:/usr/local/sbin

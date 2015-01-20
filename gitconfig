@@ -2,7 +2,7 @@
 	name = Eric Zhang
 	email = i@qinix.com
 [core]
-	editor = e
+        editor = emacsclient -t
 	excludesfile = /Users/qinix/.gitignore_global
 [alias]
 	co = checkout
